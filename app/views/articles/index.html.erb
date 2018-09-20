@@ -19,6 +19,12 @@
                     <p class="card-text">
                     <%= truncate(article.description, length: 40)%>
                     </p>
+                    <div class="article-meta-details">
+                        Created by: <%= article.user.username if article.user%>,
+                        <%= time_ago_in_words(article.created_at) %> ago, 
+                        last updated: <%= time_ago_in_words(article.updated_at) %> ago
+                    </div>
+                    
                         <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-primary" %> 
                         <%= link_to "Delete this article", article_path(article), method: :delete,
                             data: { confirm: "Are you sure you want to delete the article?"}, 
