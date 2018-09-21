@@ -1,0 +1,41 @@
+<%= render 'shared/errors', obj: @user %>
+
+<div class="row">
+ <div class="col-md-6 offset-md-3">
+    <%= form_for @user do |f| %>
+        <div class="form-group row">
+            <label for="inputUsername" class="col-sm-2 col-form-label">
+               <%= f.label :username %>
+            </label>
+            <div class="col-sm-10">
+                <%= f.text_field :username, class: "form-control", type: "text", id: "inputUsername", placeholder: "Enter username", autofocus: true%>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">
+                <%= f.label :email %><br/>
+            </label>
+            <div class="col-sm-10">
+                <%= f.email_field :email, class: "form-control", id: "inputEmail", placeholder: "Enter email" %>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">
+                <%= f.label :password %><br/>
+            </label>
+            <div class="col-sm-10">
+                <%= f.password_field :password, class: "form-control", id: "inputPassword", placeholder: "Enter password" %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <%= f.submit(@user.new_record? ? "Sign up": "Updated account", type: "submit", class: "btn btn-primary")%>
+            </div>
+        </div>
+    <% end %>
+    <div class="col-xs-4 col-xs-offset-4">
+       [ <%= link_to "Return to articles listing", articles_path%> ] 
+    </div>
+    </div>
+</div>
