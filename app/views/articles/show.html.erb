@@ -3,6 +3,17 @@
 </h2>
 
 <div class="col-md-6 offset-md-3">
+    <% if @article.user %>
+        <div class="list-group list-color">
+            <div class="d-flex w-100 justify-content-between">
+                <small class="margin-user">Created by: </small>
+                <h5 class="mb-2 margin-user"><%= link_to gravatar_for(@article.user), user_path(@article.user) %></h5>
+                <small class="margin-small"><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small> 
+            </div>
+            <p class="mb-2 center"><%= link_to @article.user.username, user_path(@article.user)%></p>
+        </div>
+    <% end %>
+
     <h4 class="center"><strong>Description</strong> </h4>
     </hr>
     <%= simple_format(@article.description) %>
