@@ -12,4 +12,16 @@
     </div>
 </div>
 
-<%= render 'articles/article', obj: @user.articles%>
+<div class="row">
+    <div class="col-md-6 offset-md-5">
+        <%= will_paginate @user_articles %>
+    </div>
+</div>
+
+<%= render 'articles/article', obj: @user_articles%>
+
+<div class="row">
+    <div class="col-md-6 offset-md-5">
+        <%= will_paginate @user_articles %>
+    </div>
+</div>
