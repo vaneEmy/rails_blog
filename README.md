@@ -1,15 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+* Ruby version: 2.5.1
 
 * System dependencies
+    - will_paginate: 3.1.5
+    
+    - will_paginate-bootstrap4 -> In order to use bootstrap4
+    
+    - Bootstrap: 4.1.3
+
+    - jquery-rails
+
+    - pg
 
 * Configuration
+    To run locally:
+    - ´´ rails s ´´
 
 * Database creation
 
@@ -19,6 +25,13 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Deployment instructions:
+    To run migrations
+
+    - ´´ heroku run rails db:migrate ´´
+
+    To deploy on heroku:
+
+    - ´´ git push heroku master ´´
 
 * ...
