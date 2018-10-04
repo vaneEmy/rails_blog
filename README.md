@@ -15,7 +15,7 @@
 
 * Configuration
     To run locally:
-    - ´´ rails s ´´
+    - ` rails s`
 
 * Database creation
 
@@ -28,10 +28,10 @@
 * Deployment instructions:
     To run migrations
 
-    - ´´ heroku run rails db:migrate ´´
+    - ` heroku run rails db:migrate `
 
     To deploy on heroku:
 
-    - ´´ git push heroku master ´´
+    - ` git push heroku master `
 
 * ...
