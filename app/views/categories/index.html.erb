@@ -1,0 +1,8 @@
+<h1 class="center margin-custom">Listing all Categories </h1>
+<% @categories.each do |category| %>
+   <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+           <%= link_to "#{category.name}", category_path(category)%>
+        </div>
+    </div>
+<% end %>
