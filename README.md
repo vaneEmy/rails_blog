@@ -20,8 +20,16 @@
 * Database creation
 
 * Database initialization
+    
+    - To run migrations
+
+     ` rails db:migrate  ` 
 
 * How to run the test suite
+
+    - To generate migrations for testing environment
+
+     ` rails db:migrate RAILS_ENV=test  ` 
 
 * Services (job queues, cache servers, search engines, etc.)
 
@@ -33,5 +41,3 @@
     To deploy on heroku:
 
     - ` git push heroku master `
-
-* ...
