@@ -7,9 +7,13 @@
 </div>
 
 <% @categories.each do |category| %>
-   <div class="row">
-        <div class="col-xs-4 col-xs-offset-4">
-           <%= link_to "#{category.name}", category_path(category)%>
+    <div class="row" style="margin-top: 1.5rem">
+        <div class="col-md-6 offset-md-3">
+            <div class="card text-center">
+                <div class="card-header">
+                    <%= link_to "#{category.name}", category_path(category)%>
+                </div>
+            </div>
         </div>
     </div>
 <% end %>
