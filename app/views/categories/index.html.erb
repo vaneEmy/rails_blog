@@ -1,4 +1,11 @@
 <h1 class="center margin-custom">Listing all Categories </h1>
+
+<div class="row">
+    <div class="col-md-6 offset-md-5">
+        <%= will_paginate :style => 'color:blue' %>
+    </div>
+</div>
+
 <% @categories.each do |category| %>
    <div class="row">
         <div class="col-xs-4 col-xs-offset-4">
@@ -6,3 +13,9 @@
         </div>
     </div>
 <% end %>
+
+<div class="row">
+    <div class="col-md-6 offset-md-5">
+        <%= will_paginate :style => 'color:blue' %>
+    </div>
+</div>
