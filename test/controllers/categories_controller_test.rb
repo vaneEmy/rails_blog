@@ -27,6 +27,5 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
         post categories_path, params: {category: {name: "sports" }}
        end
        assert_redirected_to categories_path
-
     end
 end
