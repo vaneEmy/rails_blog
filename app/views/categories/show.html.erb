@@ -1,0 +1,16 @@
+<div class="row margin-custom">
+    <div class="col-md-6 offset-md-3">
+        <h2 class="center"><%= "Category: " + @category.name%> </h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-md-5">
+        <%= will_paginate @categories_articles, :style => 'color:blue' %>
+    </div>
+</div>
+<%= render 'articles/article', obj: @categories_articles %>
+<div class="row">
+    <div class="col-md-6 offset-md-5">
+        <%= will_paginate @categories_articles%>
+    </div>
+</div>
