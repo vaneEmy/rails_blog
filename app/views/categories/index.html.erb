@@ -12,6 +12,8 @@
             <div class="card text-center">
                 <div class="card-header">
                     <%= link_to "#{category.name}", category_path(category)%>
+                    <br/>
+                    <small> <%= pluralize(category.articles.count, "article")%></small>
                 </div>
             </div>
         </div>
