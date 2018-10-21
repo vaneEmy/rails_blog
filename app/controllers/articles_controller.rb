@@ -51,7 +51,7 @@ class ArticlesController < ApplicationController
         end
 
         def article_params
-            params.require(:article).permit(:title, :description)
+            params.require(:article).permit(:title, :description, category_ids: [] )
         end
 
         # Check if the current user is not the article creator and is not an admin.
