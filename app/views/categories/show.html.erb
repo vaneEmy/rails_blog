@@ -5,6 +5,9 @@
 </div>
 <div class="row">
     <div class="col-md-6 offset-md-5">
+        <% if logged_in? and current_user.admin? %>
+            <span class="badge"><%= link_to "Edit Category name", edit_category_path(@category)%></span>
+        <% end %>
         <%= will_paginate @categories_articles, :style => 'color:blue' %>
     </div>
 </div>
