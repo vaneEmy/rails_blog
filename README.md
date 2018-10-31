@@ -1,29 +1,33 @@
 # README
+To run the project, you should have:
 
-* Ruby version: 2.5.1
-
-* System dependencies
-    - will_paginate: 3.1.5
+    - Ruby version: 2.5.1
     
-    - will_paginate-bootstrap4 -> In order to use bootstrap4
-    
-    - Bootstrap: 4.1.3
-
-    - jquery-rails
-
-    - pg
+    - Postgresql 10.5
 
 * Configuration
-    To run locally:
-    - ` rails s`
+
+    - Create an ENV variable for PASSWORD in order to connect your database:
+
+    - clone the repository and execute the following command:
+    
+      ` bundle install`
 
 * Database creation
 
+    - Create a database: blog_development
+
+    - The blog is using postgres role
+
 * Database initialization
-    
+
     - To run migrations
 
      ` rails db:migrate  ` 
+
+* To run the app:
+   
+    - ` rails server`
 
 * How to run the test suite
 
@@ -31,13 +35,14 @@
 
      ` rails db:migrate RAILS_ENV=test  ` 
 
-* Services (job queues, cache servers, search engines, etc.)
+    - To run the test
 
 * Deployment instructions:
-    To run migrations
 
-    - ` heroku run rails db:migrate `
+    - To run migrations
 
-    To deploy on heroku:
+     ` heroku run rails db:migrate `
 
-    - ` git push heroku master `
+    - To deploy on heroku:
+
+     ` git push heroku master `
