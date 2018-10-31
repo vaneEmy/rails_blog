@@ -15,7 +15,7 @@ development:
   adapter: postgresql
   encoding: utf8
   database: blog_development
-  username: postgres
+  username:  <%= ENV['USER_NAME'] %>
   password: <%= ENV['PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
@@ -24,6 +24,8 @@ development:
 test:
   <<: *default
   database: blog_test
+  username: <%= ENV['USER_NAME'] %>
+  password: <%= ENV['PASSWORD'] %>
 
 production:
   <<: *default
