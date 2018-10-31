@@ -7,7 +7,11 @@ To run the project, you should have:
 
 * Configuration
 
-    - Create an ENV variable for PASSWORD in order to connect your database:
+    - Create an ENV variable for PASSWORD and USER_NAME in order to connect your database:
+
+    `USER_NAME="user_name" `  
+
+    ` PASSWORD="password" `  
 
     - clone the repository and execute the following command:
     
@@ -16,8 +20,6 @@ To run the project, you should have:
 * Database creation
 
     - Create a database: blog_development
-
-    - The blog is using postgres role
 
 * Database initialization
 
@@ -31,11 +33,13 @@ To run the project, you should have:
 
 * How to run the test suite
 
-    - To generate migrations for testing environment
+    - You need To generate migrations for testing environment
 
      ` rails db:migrate RAILS_ENV=test  ` 
 
     - To run the test
+
+        ` rails test ` 
 
 * Deployment instructions:
 
