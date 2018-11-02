@@ -1,21 +1,22 @@
-<h2 class="center margin-custom">
-    Title: <%= @article.title %>
-</h2>
+<h3 class="center margin-custom display-4">
+   Title: <%= @article.title %>
+</h3>
 
 <div class="col-md-6 offset-md-3">
     <% if @article.user %>
-        <div class="list-group list-color">
+        <div class="list-group">
+            <p>
+                <small class="details"> Created by: </small>
+                <%= link_to @article.user.username, user_path(@article.user)%> 
+            </p>
             <div class="d-flex w-100 justify-content-between">
-                <small class="margin-user">Created by: </small>
-                <h5 class="mb-2 margin-user"><%= link_to gravatar_for(@article.user), user_path(@article.user) %></h5>
-                <small class="margin-small"><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small> 
+                <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+                 <small class="details"><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small> 
             </div>
-            <p class="mb-2 center"><%= link_to @article.user.username, user_path(@article.user)%></p>
         </div>
     <% end %>
-
-    <h4 class="center"><strong>Description</strong> </h4>
-    </hr>
+    <hr/>
+    <h4><strong>Description</strong> </h4>
     <%= simple_format(@article.description) %>
     <% if @article.categories.any? %>
         <p>Categories: <%= render @article.categories %> </p>
