@@ -1,4 +1,4 @@
-<h1 class="center margin-custom"> All bloggers</h1>
+<h1 class="center margin-custom blood"> All bloggers</h1>
 
 <div class="row">
     <div class="col-md-6 offset-md-5">
@@ -9,21 +9,26 @@
 <div class="row">
     <div class="col-md-4 offset-md-4">
         <% @users.each do |user| %>
-            <div class="list-group list-color">
+            <div class="list-group">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-2 margin-user"><%= link_to gravatar_for(user), user_path(user) %></h5>
-                    <small class="margin-small"><%= pluralize(user.articles.count, "article") if user.articles %></small> 
-                    <% if logged_in? and current_user.admin? %>
-                        <small> <%= link_to "Delete this user", user_path(user), method: :delete, 
-                            data: { confirm: "Are you sure you want to delete the user and all their articles?"} %> </small>
-                    <% end %>
+                    <h5 class="mb-2"><%= link_to gravatar_for(user), user_path(user) %></h5>
+                     <small class="details"><%= pluralize(user.articles.count, "article") if user.articles %></small> 
                 </div>
-                <p class="mb-2 margin-user"><%= link_to user.username, user_path(user)%></p>
+                <div  class="d-flex w-100 justify-content-between">
+                    <p class="mb-2 margin-user"><%= link_to user.username, user_path(user)%></p>
+                </div>
+                <% if logged_in? and current_user.admin? %>
+                    <%= link_to "Delete this user", user_path(user), method: :delete, 
+                            data: { confirm: "Are you sure you want to delete the user and all their articles?"},
+                            class: "btn btn-outline-danger" %>
+                <% end %>
+                
             </div>
+            <hr/>
         <% end %>
     </div>
 </div>
-<div class="row">
+<div class="row margin-pagination">
     <div class="col-md-6 offset-md-5">
         <%= will_paginate%>
     </div>
