@@ -1,4 +1,7 @@
 # README
+
+This is a small blog project in Ruby on Rails.
+
 To run the project, you should have:
 
     - Ruby version: 2.5.1
@@ -9,13 +12,13 @@ To run the project, you should have:
 
     - Create an ENV variable for PASSWORD and USER_NAME in order to connect your database:
 
-    `USER_NAME="user_name" `  
+         `USER_NAME="user_name" `  
 
-    ` PASSWORD="password" `  
+        ` PASSWORD="password" `  
 
     - clone the repository and execute the following command:
     
-      ` bundle install`
+       ` bundle install `
 
 * Database creation
 
@@ -25,21 +28,21 @@ To run the project, you should have:
 
     - To run migrations
 
-     ` rails db:migrate  ` 
+         ` rails db:migrate  ` 
 
 * To run the app:
    
-    - ` rails server`
+       ` rails server`
 
 * How to run the test suite
 
     - You need To generate migrations for testing environment
 
-     ` rails db:migrate RAILS_ENV=test  ` 
+         ` rails db:migrate RAILS_ENV=test  ` 
 
     - To run the test
 
-        ` rails test ` 
+           ` rails test ` 
 
 * Deployment instructions:
 
