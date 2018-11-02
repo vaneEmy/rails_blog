@@ -16,10 +16,10 @@
         </div>
     <% end %>
     <hr/>
-    <h4><strong>Description</strong> </h4>
+    <strong>Description</strong>
     <%= simple_format(@article.description) %>
     <% if @article.categories.any? %>
-        <p>Categories: <%= render @article.categories %> </p>
+        <p><strong>Categories:</strong> <%= render @article.categories %> </p>
     <% end %>
     <div class="col-xs-4 col-xs-offset-4 ">
         <% if logged_in? && (current_user == @article.user || current_user.admin?)%>
