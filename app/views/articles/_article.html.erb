@@ -2,14 +2,12 @@
     <div class="row" style="margin-top: 1.5rem">
         <div class="col-md-6 offset-md-3">
             <div class="card text-center">
-                <div class="card-header">
-                    <%= link_to article.title, article_path(article)%>
-                </div>
-                <div class="card-block">
+                <div class="card-body">
+                    <h4><%= link_to article.title, article_path(article), class: "card-title display-4" %></h4>
                     <p class="card-text">
                     <%= truncate(article.description, length: 40)%>
                     </p>
-                    <div class="article-meta-details">
+                    <div class="card-body details">
                         Created by: <%= article.user.username if article.user%>,
                         <%= time_ago_in_words(article.created_at) %> ago, 
                         last updated: <%= time_ago_in_words(article.updated_at) %> ago
