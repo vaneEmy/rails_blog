@@ -1,6 +1,6 @@
 # README
 
-This is a small blog project in Ruby on Rails.
+This is my small version of the blog project from the Complete Ruby on Rails Developer course.
 
 To run the project, you should have:
 
