@@ -1,6 +1,7 @@
 # README
 
 This is my small version of the blog project from the Complete Ruby on Rails Developer course.
+https://vanessa-blog-rails.herokuapp.com/
 
 To run the project, you should have:
 
